@@ -1,6 +1,38 @@
 package Makins;
 
-public class Student {
+public class Student implements Comparable{
+	
+	public static long idGenerator = 000000000;
+	long StudentNumber;	
+	int var1 = 0;
+	int var2 = 1;
+	int var3 = 2;		
+	
+	public Student(String firstName, String lastName, String streetAddress, String city, String province, String postalCode, String phoneNumber, String birthDate){
+		setFirstName(firstName);
+		setLastName(lastName);
+		setStreetAddress(streetAddress);
+		setCity(city);
+		setProvince(province);
+		setPostalCode(postalCode);
+		setPhoneNumber(phoneNumber);
+		setBirthDate(birthDate);
+	}
+	
+	
+	public Student(){
+		setFirstName("");
+		setLastName("");
+		setStreetAddress("");
+		setCity("");
+		setProvince("");
+		setPostalCode("");
+		setPhoneNumber("");
+		setBirthDate("");
+		this.setStudentNumber(idGenerator);
+		idGenerator++;
+	
+	}
 
 	private String FirstName;
 	private String LastName;
@@ -43,6 +75,10 @@ public class Student {
 		this.BirthDate = Bdate;
 	}
 	
+	public void setStudentNumber(long studentNumber) {
+		StudentNumber = studentNumber;
+	}
+	
 	public String getFirstName(){
 		return this.FirstName;
 	}
@@ -73,6 +109,27 @@ public class Student {
 	
 	public String getBirthDate(){
 		return this.BirthDate;
+	}		
+	
+	public long getStudentNumber() {
+		return StudentNumber;
 	}
+	
+	public String toString(){
+		return var1 +","+ var2 +"," + var3;
+	}
+
+	@Override
+	public int compareTo(Object arg0) {
 		
-}
+		return 0;
+	}
+
+
+	public void remove() {
+		
+	}
+
+ }
+
+ 
