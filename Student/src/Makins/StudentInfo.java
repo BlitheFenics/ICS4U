@@ -9,6 +9,7 @@ public class StudentInfo extends Student {
 	static Student student = new Student();
 	static Scanner in = new Scanner(System.in);
 	static ArrayList<Student> studRecs = new ArrayList<Student>();
+	static int numStu;
 	
 	public static void main(String[] args) {
 		
@@ -109,8 +110,9 @@ public class StudentInfo extends Student {
 		
 		public static void removeStudent(){
 			System.out.println("Type the student number of the student you want to delete (first one starts at 000000000).");
-			Student tempRecord = studRecs.get(in.nextInt());
-			tempRecord.remove();
+			numStu = in.nextInt();
+			studRecs.remove(numStu - 1);
+			
 		}
 
 		public static void searchStudent(Student student){
@@ -123,6 +125,7 @@ public class StudentInfo extends Student {
 			System.out.println(student.getPostalCode());
 			System.out.println(student.getPhoneNumber());
 			System.out.println(student.getBirthDate());
+
 		}
 		
 		public static void sortStudent(){
