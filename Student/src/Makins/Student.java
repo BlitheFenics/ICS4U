@@ -2,11 +2,10 @@ package Makins;
 
 public class Student implements Comparable{
 	
+	// Creates the ID Generator, the student number, and creates all the variables used in the student record.
+	
 	public static long idGenerator = 000000000;
-	long StudentNumber;	
-	int var1 = 0;
-	int var2 = 1;
-	int var3 = 2;		
+	static long StudentNumber;		
 	
 	public Student(String firstName, String lastName, String streetAddress, String city, String province, String postalCode, String phoneNumber, String birthDate){
 		setFirstName(firstName);
@@ -17,8 +16,8 @@ public class Student implements Comparable{
 		setPostalCode(postalCode);
 		setPhoneNumber(phoneNumber);
 		setBirthDate(birthDate);
+		
 	}
-	
 	
 	public Student(){
 		setFirstName("");
@@ -116,15 +115,14 @@ public class Student implements Comparable{
 	}
 	
 	public String toString(){
-		return var1 +","+ var2 +"," + var3;
+		return FirstName +","+ LastName +"," + StreetAddress + "," + City +","+ Province + "," + PostalCode + "," + PhoneNumber + "," + BirthDate + "," + StudentNumber;
 	}
 
 	@Override
-	public int compareTo(Object arg0) {
+	public int compareTo(Object O) {
 		
 		return 0;
 	}
-
 
 	public void remove() {
 		
